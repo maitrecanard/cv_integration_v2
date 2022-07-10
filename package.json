@@ -1,0 +1,23 @@
+{
+  "name": "DLC_integration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss -o assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maitrecanard/DLC_integration.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maitrecanard/DLC_integration/issues"
+  },
+  "homepage": "https://github.com/maitrecanard/DLC_integration#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
