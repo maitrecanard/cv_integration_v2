@@ -103,9 +103,11 @@
                     flex-direction: column;
                     font-family: Arial, Helvetica, sans-serif;
                     padding: 0.4em 0;
-                    .blog__contentr__info__items {
+                    .blog__content__info__items {
+                        height: 35px;
                         display: flex;
-                       
+                
+                       line-height: 0.5em;
                     }
                 }
                 p {
@@ -142,12 +144,20 @@
         padding: 0.1em 0 0.1em 0;
     }
     display: flex;
-    margin-right: 2em;
+    margin-right: 1em;
     padding: 0.3em 0 0.3em 0;
     font-size: 1.2em;
 }
 
 .svg {
- width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
+    margin-left: 0.4em;
+    margin-top: -0.7em;
+    color :#666;
+}
+.svg__comment {
+    width: 30px;
+    height: 30px;
+    margin-top: -0.5em;
 }
