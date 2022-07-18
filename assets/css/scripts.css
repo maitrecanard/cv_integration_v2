@@ -1,5 +1,10 @@
+/* Landscape phonesand down */
+/* Landscape phones to portrait tablet */
+/* Landscape tablet and landscape ans desktop */
 :root {
-  --fond-man: url('https://images.unsplash.com/flagged/photo-1553642618-de0381320ff3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80'); }
+  --fond-man: url('https://images.unsplash.com/flagged/photo-1553642618-de0381320ff3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80');
+  --box-shadow: 1px 1px 8px 2px rgba(0,0,0,0.16);
+  --blanc-casse: #fffafa; }
 
 * {
   margin: 0;
@@ -8,9 +13,14 @@
 
 .wrapper {
   display: flex; }
+  @media (max-width: 480px) {
+    .wrapper {
+      flex-direction: column; } }
   .wrapper .left-box {
     background-image: var(--fond-man);
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -30,6 +40,9 @@
   .wrapper .wrapper__item {
     width: 50%;
     height: 100vh; }
+    @media (max-width: 480px) {
+      .wrapper .wrapper__item {
+        width: 100%; } }
   .wrapper footer {
     display: flex;
     justify-content: flex-end; }
@@ -44,7 +57,7 @@
       width: 100%;
       height: 4em;
       padding-top: 1.3em;
-      background-color: #fffafa; }
+      background-color: var(--blanc-casse); }
       .wrapper .right-box header h3 {
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
@@ -56,36 +69,64 @@
       flex-direction: column;
       align-items: center;
       padding: 1em; }
+      @media (max-width: 480px) {
+        .wrapper .right-box main {
+          overflow: none; } }
       .wrapper .right-box main .blog__content {
         width: 95%;
         border-radius: 0.5em;
-        -webkit-box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.16);
-        box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: var(--box-shadow);
+        box-shadow: var(--box-shadow);
         margin: 10px;
         display: flex; }
+        @media (max-width: 480px) {
+          .wrapper .right-box main .blog__content {
+            flex-direction: column; } }
         .wrapper .right-box main .blog__content h4 {
-          font-size: 2em;
+          font-size: 1.6em;
           font-family: Arial, Helvetica, sans-serif;
-          padding: 0.4em; }
+          padding: 0.4em 0 0.4em 0; }
+          @media (max-width: 480px) {
+            .wrapper .right-box main .blog__content h4 {
+              text-align: center; } }
         .wrapper .right-box main .blog__content .blog__content__info {
           display: flex;
           flex-direction: column;
-          font-family: Arial, Helvetica, sans-serif; }
+          font-family: Arial, Helvetica, sans-serif;
+          padding: 0.4em 0; }
+          @media (max-width: 480px) {
+            .wrapper .right-box main .blog__content .blog__content__info {
+              padding: 0 0.4em 0 0.4em; } }
+          .wrapper .right-box main .blog__content .blog__content__info .blog__contentr__info__items {
+            display: flex; }
         .wrapper .right-box main .blog__content p {
-          padding: 0.5em; }
+          padding: 0.4em 0.4em 0.4em 0; }
         .wrapper .right-box main .blog__content img {
           width: 200px;
           height: 150px;
           margin-right: 1.2em;
           float: left;
-          background-color: #333;
           border-top-left-radius: 0.5em;
-          border-bottom-left-radius: 0.5em; }
+          border-bottom-left-radius: 0.5em;
+          object-fit: cover; }
+          @media (max-width: 480px) {
+            .wrapper .right-box main .blog__content img {
+              width: 100%;
+              border-top-left-radius: 0.5em;
+              border-bottom-left-radius: 0;
+              border-top-right-radius: 0.5em; } }
         .wrapper .right-box main .blog__content .blog__content__view {
           display: flex;
           justify-content: flex-end; }
 
 .blog {
+  display: flex;
   margin-right: 2em;
-  padding: 0.3em;
+  padding: 0.3em 0 0.3em 0;
   font-size: 1.2em; }
+  @media (max-width: 480px) {
+    .blog {
+      padding: 0.1em 0 0.1em 0; } }
+
+.icon-eye:before {
+  content: "\e9ce"; }
