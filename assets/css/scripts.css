@@ -47,9 +47,15 @@
     display: flex;
     justify-content: flex-end; }
     .wrapper footer nav {
+      width: 30em;
       color: white; }
-      .wrapper footer nav ul li {
-        list-style: none; }
+      .wrapper footer nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .wrapper footer nav ul li {
+          list-style: none;
+          font-family: Arial, Helvetica, sans-serif; }
   .wrapper .right-box {
     display: flex;
     flex-direction: column; }
