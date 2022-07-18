@@ -131,5 +131,6 @@
     .blog {
       padding: 0.1em 0 0.1em 0; } }
 
-.icon-eye:before {
-  content: "\e9ce"; }
+.svg {
+  width: 25px;
+  height: 25px; }
