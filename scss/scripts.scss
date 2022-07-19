@@ -1,24 +1,6 @@
+@import 'media-queries';
 @import 'variable';
 @import 'reset';
-@import 'courses';
+@import 'index';
 
-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    .header__logo {
-        font-family: var(--title);
-    }
-}
-button {
-    cursor: pointer;
-}
-.success {
-    
-    background-color: rgb(21, 196, 50);
-    text-align: center;
-    height: 2em;
-    padding-top: 0.5em;
-    font-family: Arial, Helvetica, sans-serif;
 
-}
