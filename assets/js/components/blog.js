@@ -1,7 +1,5 @@
 const blog = {
 
-    apiUrl: "https://mathieusiaudeau.fr/api",
-
     uri:"blog",
 
     init: function() {
@@ -15,7 +13,7 @@ const blog = {
             cache:"no-cache"
         };
 
-        const fullUrl = blog.apiUrl + '/' + blog.uri;
+        const fullUrl = app.apiUrl + blog.uri;
         fetch(fullUrl, config)
         .then(
             function(response){
