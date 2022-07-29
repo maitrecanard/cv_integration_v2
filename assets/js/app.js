@@ -1,7 +1,7 @@
 const app = {
 
-    apiUrl: "https://mathieusiaudeau.fr/api/",
-
+    //apiUrl: "https://mathieusiaudeau.fr/api/",
+    apiUrl: "http://localhost:8080/api/",
 
     init: function()
     {
