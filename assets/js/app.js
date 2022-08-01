@@ -6,6 +6,7 @@ const app = {
     init: function()
     {
         blog.init();
+        cv.init();
     }
 }
 
