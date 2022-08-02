@@ -71,6 +71,25 @@ h5 {
                 }
                 width: 50%;
                 padding: 0 2em;
+                .cv__content__skill__content__h5 {
+                    @include xs {
+                        margin-bottom: 1em;
+                    }
+
+                }
+                .cv__content__skill__content__stars-container {
+                    @include xs {
+                        margin-bottom: 2em;
+                    }
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+                    .text-primary {
+                        color: var(--primary); }
+                    
+                }
             }
 
         }
@@ -113,6 +132,5 @@ h5 {
 section {
     margin-bottom: 2rem;
 }
-.text-primary {
-    color: var(--primary); }
+
   
