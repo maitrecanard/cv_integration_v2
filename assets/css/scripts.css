@@ -240,6 +240,8 @@ h5 {
       @media (max-width: 480px) {
         .cv .cv__content__skill .cv__content__skill__content .cv__content__skill__content__h5 {
           margin-bottom: 1em; } }
+      .cv .cv__content__skill .cv__content__skill__content img {
+        width: 40px; }
       .cv .cv__content__skill .cv__content__skill__content .cv__content__skill__content__stars-container {
         margin-left: auto;
         margin-right: auto;
