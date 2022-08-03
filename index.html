@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script defer src="./assets/js/components/blog.js"></script>
+<script defer src="./assets/js/components/mail.js"></script>
 <script defer src="./assets/js/app.js"></script>
 <script defer src="https://kit.fontawesome.com/011d5ad9e9.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="./assets/css/scripts.css">
@@ -171,7 +172,25 @@
                         </section>
                    </article>
                      <!--Foreach end-->
-
+                   <form class="cv__form" action="">
+                        <h4 class="cv__form__title">Me contacter</h4>
+                        <div class="cv__form__element">
+                            <input class="cv__form__element-name" type="text" name="name" id="" placeholder="Votre nom et prénom">
+                        </div>
+                        <div class="cv__form__element">
+                            <input class="cv__form__element-email" type="email" name="email" id="" placeholder="Votre email">
+                        </div>
+                        <div class="cv__form__element">
+                            <textarea class="cv__form__element-text" name="" id="" name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+                        </div>
+                        <div class="cv__form__element">
+                            <input class="cv__form__element-checkbox" type="checkbox" name="valid" id="">
+                        </div>
+                        <div class="message"></div>
+                        <div class="cv__form__element">
+                            <button type="submit">Envoyer</button>
+                        </div>
+                   </form>
                 </main>
             </div>
        </div>
