@@ -61,12 +61,19 @@ const mail = {
         const fullUrl = app.apiUrl + mail.uri;
         fetch(fullUrl, config)
         .then(function(response){
-            return response.json();
+            if (response.status == 201) {
+                const contentMessage = 'Votre message a bien été envoyé'
+                mail.successMessage(contentMessage);
+                mail.cleanForm();
+
+            } else {
+                const contentMessage = 'Erreur lors de l\envoi du message'
+                mail.erreurMessage(contentMessage);
+                mail.cleanForm();
+            }
+            
         })
 
-        const contentMessage = 'Votre message a bien été envoyé'
-        mail.successMessage(contentMessage);
-        mail.cleanForm();
 
         
     },
