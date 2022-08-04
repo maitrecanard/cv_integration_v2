@@ -321,7 +321,9 @@ section {
         .cv__form .cv__form__element button {
           width: 100px;
           height: 100px;
-          border-radius: 50%; } }
+          border-radius: 50%; }
+          .cv__form .cv__form__element button:hover {
+            border-radius: 50%; } }
     .cv__form .cv__form__element .cv__form__element-checkbox {
       height: 15px;
       margin-top: .5em;
