@@ -317,6 +317,11 @@ section {
       border-radius: 7px;
       border: 1px solid var(--light);
       background-color: white; }
+      @media (max-width: 480px) {
+        .cv__form .cv__form__element button {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%; } }
     .cv__form .cv__form__element .cv__form__element-checkbox {
       height: 15px;
       margin-top: .5em;

@@ -53,7 +53,7 @@ const mail = {
 
         const config = {
             method: "POST",
-            core: "cors",
+            mode: "cors",
             cache: "no-cache",
             body: JSON.stringify(data)
         }
