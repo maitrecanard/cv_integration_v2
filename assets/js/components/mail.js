@@ -16,20 +16,20 @@ const mail = {
         
         const name = document.querySelector('.cv__form__element-name').value;
         const email = document.querySelector('.cv__form__element-email').value;
-        const text = document.querySelector('.cv__form__element-text').value;
+        const message = document.querySelector('.cv__form__element-text').value;
         const checkbox = document.querySelector('.cv__form__element-checkbox').checked;
        // console.log(name);
         //console.log(email);
        // console.log(text);
        // console.log(checkbox);
-        if (!name || !email || !text || checkbox === false) 
+        if (!name || !email || !message || checkbox === false) 
         {
             const contentMessage = 'Veuillez renseigner tous les champs'
             mail.erreurMessage(contentMessage);
             die;
         } 
  
-        mail.sendMail(name,email,text,checkbox);
+        mail.sendMail(name,email,message,checkbox);
         
     },
 
@@ -42,12 +42,12 @@ const mail = {
         mail.message.classList.remove('success');
     },
 
-    sendMail: function(name,email,text,checkbox)
+    sendMail: function(name,email,message,checkbox)
     {
         const data = {
             "name" : name,
             "email" : email,
-            "text" : text,
+            "message" : message,
             "checkbox" : checkbox
         }
 
@@ -61,13 +61,14 @@ const mail = {
         const fullUrl = app.apiUrl + mail.uri;
         fetch(fullUrl, config)
         .then(function(response){
+            console.log(response)
             if (response.status == 201) {
                 const contentMessage = 'Votre message a bien été envoyé'
                 mail.successMessage(contentMessage);
                 mail.cleanForm();
 
             } else {
-                const contentMessage = 'Erreur lors de l\envoi du message'
+                const contentMessage = 'Erreur lors de l\'envoi du message'
                 mail.erreurMessage(contentMessage);
                 mail.cleanForm();
             }
