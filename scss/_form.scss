@@ -2,6 +2,7 @@
     @include xs {
         width: 90%;
     }
+    position: relative;
     width: 60%;
     margin: 3em 0;
     
@@ -69,7 +70,17 @@ input {
 }
 
 .message {
+    @include xs {
+        top: 1.5em
+    }
+    position: absolute;
+    z-index: 10;
     display: none;
+    top: 1.5em;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+  
 }
 
 .error {
@@ -79,6 +90,9 @@ input {
     height: 2em;
     color: white;
     padding-top: .4em;
+    border-radius: 5px;
+  
+    
 }
 
 .success {
@@ -89,3 +103,4 @@ input {
     color: black;
     padding-top: .4em;
 }
+
