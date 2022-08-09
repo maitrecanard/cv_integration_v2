@@ -7,7 +7,6 @@ const mail = {
     init: function() {
         const submit = document.querySelector('.cv__form');
         submit.addEventListener('submit', mail.controlMail);
-        console.log(submit)
     },
 
     controlMail: function(event)
@@ -55,26 +54,32 @@ const mail = {
             method: "POST",
             mode: "cors",
             cache: "no-cache",
+            headers: app.httpHeaders,
             body: JSON.stringify(data)
         }
 
         const fullUrl = app.apiUrl + mail.uri;
         fetch(fullUrl, config)
         .then(function(response){
-            console.log(response)
-            if (response.status == 201) {
-                const contentMessage = 'Votre message a bien été envoyé'
-                mail.successMessage(contentMessage);
-                mail.cleanForm();
-
-            } else {
-                const contentMessage = 'Erreur lors de l\'envoi du message'
-                mail.erreurMessage(contentMessage);
-                mail.cleanForm();
-            }
-            
+            return  response.json();
         })
+        .then(
+            function(message)
+            {
+               if (message === 201)
+               {
+                const success = "Votre message a bien été envoyé  (Vérifier vos spams)";
+                    mail.successMessage(success);
 
+                    mail.cleanForm();
+               } else 
+               {
+                console.log(message['error'])
+
+                   mail.erreurMessage(message['error']);
+                   mail.cleanForm();
+               }
+            });
 
         
     },

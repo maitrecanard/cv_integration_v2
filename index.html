@@ -8,20 +8,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script defer src="./assets/js/components/blog.js"></script>
 <script defer src="./assets/js/components/mail.js"></script>
+<script defer src="./assets/js/components/mentions.js"></script>
 <script defer src="./assets/js/app.js"></script>
 <script defer src="https://kit.fontawesome.com/011d5ad9e9.js" crossorigin="anonymous"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./assets/css/scripts.css">
-    <title>Mathieu SIAUDEAU Développeur Web / web mobile</title>
+    <title>Mathieu SIAUDEAU concepteur d'application web</title>
 </head>
 <body>
        <div class="wrapper">
             <div class="left-box wrapper__item">
                 <h1>Mathieu SIAUDEAU</h1>
                 <article class="presentation">
-                    <h2 class="presentation__title">Développeur Web et  web mobile</h2>
+                    <h2 class="presentation__title">Concepteur d'application web</h2>
                     <p class="presentation__content">
                         Suite à une reconversion professionnelle. Depuis 2017, Vivaticket est ma première 
                         expérience en informatique. J'y ai découvert l'univers du software en travaillant à temps plein sur la 
@@ -33,10 +34,10 @@
                 <footer>
                     <nav>
                         <ul>
-                            <li>Accueil</li>
-                            <li>Mon CV</li>
-                            <li>Mes projets</li>
-                            <li>Me contacter</li>
+                            <li><a href="https://github.com/maitrecanard" target="_blank"><img style="width:40px;" src="./assets/img/git.png" alt=""></a></li>
+                            <li><a href="https://www.linkedin.com/in/mathieu-siaudeau-241b98131/" target="_blank"><img style="width:40px;" src="./assets/img/link.png" alt=""></a></li>
+                            <li><a href="https://www.facebook.com/mathieusiaudeau.fr" target="_blank"><img style="width:40px;" src="./assets/img/face.png" alt=""></a></li>
+                            <li><div class="mention">Mentions légales</div></li>
                         </ul>
                     </nav>
                 </footer>
@@ -103,7 +104,7 @@
                                 <div class="cv__content__skill__content">
                                     <h5>FRONT END</h5>
                                     <div class="cv__content__skill_content__img">
-                                        <img src="https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_html_icon_130541.png" alt="">
+                                        <img src="./assets/img/html.png" alt="">
                                         <img src="data:image/png;base64,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" alt="">
                                         <img src="https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png" alt="">
                                         <img src="data:image/png;base64,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" alt="">
@@ -152,16 +153,19 @@
                         <h4 class="cv__form__title">Me contacter</h4>
                         <div class="message"></div>
                         <div class="cv__form__element">
-                            <input class="cv__form__element-name" type="text" name="name" id="" placeholder="Votre nom et prénom">
+                            <input class="cv__form__element-name" type="text" name="name" placeholder="Votre nom et prénom">
                         </div>
                         <div class="cv__form__element">
-                            <input class="cv__form__element-email" type="email" name="email" id="" placeholder="Votre email">
+                            <input class="cv__form__element-email" type="email" name="email" placeholder="Votre email">
                         </div>
                         <div class="cv__form__element">
-                            <textarea class="cv__form__element-text" name="" id="" name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+                            <textarea class="cv__form__element-text" name="message" cols="30" rows="10" placeholder="Votre message"></textarea>
                         </div>
                         <div class="cv__form__element">
-                            <input class="cv__form__element-checkbox" type="checkbox" name="valid" id="">
+                            <div class="cv__form__element__checkbox">
+                                <input class="cv__form__element-checkbox" type="checkbox" name="valid">
+                                <p>J'accepte que le site mathieusiaudeau.fr conserve mes données personnelles via ce formulaire. Aucune exploitation commerciale ne sera faite des données conservées.</p>
+                            </div>
                         </div>
                         
                         <div class="cv__form__element">
@@ -169,6 +173,27 @@
                         </div>
                    </form>
                 </main>
+            </div>
+       </div>
+       <div class="mentions">
+            <div class="mentions__info">
+                <div class="mentions__info__title__content">
+                    <div class="mentions__info__title">Mentions légales</div>
+                    <div class="close_mentions">X</div>
+                </div>
+                <div class="mentions__info__content">
+                    <span>Le site mathieusiaudeau.fr</span>
+                    <p>Site réalisé par Mathieu SIAUDEAU concepteur d'application web</p>
+                    <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site https://crossfitdaemon.fr/ l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi, Personne moral et physique resterons anonyme</p>
+                    <p>Créateur et responsable publication: Mahtieu SIAUDEAU</p>
+                    <p>Le responsable publication est une personne physique ou une personne morale.</p>
+                    <span>Le site mathieusiaudeau.fr est hébergé par</span>
+                    <p>O2switch, SARL au capital de 100000€ dont le siège social est établi 222-224 Boulevard Gustave Flaubert 63000 Clermont-Ferrand immatriculée au Registre du Commerce et des Sociétés sous le numéro 510 909 80700024 - RCS Clermont Ferrand</p>
+                    <span>Déclaration de confidentialité</span>
+                    <p>mathieusiaudeau.fr prête une attention particulière à vos données personnelles, et s’engage de par ses conditions d’utilisation à ne transmettre, vendre ou céder à un tiers aucune information personnelle vous concernant. Veuillez également consulter notre Politique concernant la gestion des cookies Conformément à la loi « Informatique et Libertés » N° 78-17 du 6 Janvier 1978, vous bénéficiez d’un droit d’accès, de rectification et d’opposition. Pour l’exercer, merci de bien vouloir nous contacter par l’intermédiaire du formulaire de contact.</p>
+                    <span>Politique de gestion des cookies</span>
+                    <p>Les cookies utilié sur ce site, sont produites par le framework Laravel. Et n'ont pas pour fonction la récupération de données personnelle.</p>
+                </div>
             </div>
        </div>
        <template id="blog">

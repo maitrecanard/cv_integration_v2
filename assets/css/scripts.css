@@ -58,15 +58,19 @@
     display: flex;
     justify-content: flex-end; }
     .wrapper footer nav {
-      width: 30em;
-      color: white; }
+      width: 30em; }
       .wrapper footer nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-between; }
+        justify-content: space-between;
+        align-items: center; }
         .wrapper footer nav ul li {
           list-style: none;
           font-family: 'Roboto', sans-serif; }
+          .wrapper footer nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif; }
   .wrapper .right-box {
     display: flex;
     flex-direction: column; }
@@ -342,7 +346,7 @@ section {
       font-family: 'Roboto', sans-serif; }
     .cv__form .cv__form__element button {
       width: 60%;
-      margin-top: .8em;
+      margin-top: 1.5em;
       height: 30px;
       cursor: pointer;
       border-radius: 7px;
@@ -359,14 +363,25 @@ section {
           font-family: 'Roboto', sans-serif; }
           .cv__form .cv__form__element button:hover {
             border-radius: 50%; } }
-    .cv__form .cv__form__element .cv__form__element-checkbox {
-      height: 15px;
-      margin-top: .5em;
-      text-align: left; }
-      @media (max-width: 480px) {
-        .cv__form .cv__form__element .cv__form__element-checkbox {
-          height: 25px;
-          margin: 1em 0; } }
+    .cv__form .cv__form__element p {
+      font-family: Arial, Helvetica, sans-serif; }
+    .cv__form .cv__form__element .cv__form__element__checkbox {
+      display: flex;
+      margin-top: 1em; }
+      .cv__form .cv__form__element .cv__form__element__checkbox .cv__form__element-checkbox {
+        flex: 1;
+        height: 15px;
+        margin-top: .5em;
+        text-align: left; }
+        @media (max-width: 480px) {
+          .cv__form .cv__form__element .cv__form__element__checkbox .cv__form__element-checkbox {
+            height: 25px;
+            margin: 1em 0; } }
+      .cv__form .cv__form__element .cv__form__element__checkbox p {
+        flex: 9; }
+        @media (max-width: 480px) {
+          .cv__form .cv__form__element .cv__form__element__checkbox p {
+            flex: 7; } }
 
 input {
   outline: 0;
@@ -402,3 +417,62 @@ input {
   color: black;
   padding-top: .4em;
   border-radius: 5px; }
+
+.mention {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer; }
+
+.mentions {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.486); }
+  .mentions .mentions__info {
+    padding: 1em;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    width: 40%;
+    height: auto; }
+    @media (max-width: 480px) {
+      .mentions .mentions__info {
+        width: 100%;
+        height: 100vh; } }
+    .mentions .mentions__info .mentions__info__title__content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5em;
+      margin-bottom: .5em; }
+      .mentions .mentions__info .mentions__info__title__content .close_mentions {
+        cursor: pointer; }
+    .mentions .mentions__info .mentions__info__content {
+      display: flex;
+      flex-direction: column;
+      font-family: Arial, Helvetica, sans-serif; }
+      @media (max-width: 480px) {
+        .mentions .mentions__info .mentions__info__content {
+          height: 90%;
+          overflow: auto; } }
+      .mentions .mentions__info .mentions__info__content span {
+        font-size: 1.3em;
+        font-weight: 300;
+        margin-top: 1em;
+        margin-bottom: .5em; }
+      .mentions .mentions__info .mentions__info__content p {
+        margin-bottom: .4em; }
+
+.open {
+  display: flex; }
+
+body {
+  z-index: 0;
+  position: relative; }

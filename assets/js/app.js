@@ -11,6 +11,7 @@ const app = {
         blog.init();
         //cv.init();
         mail.init();
+        mentions.init();
     }
 }
 

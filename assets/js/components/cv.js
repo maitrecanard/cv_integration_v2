@@ -15,19 +15,18 @@ const cv = {
             cache: "no-cache"
         };
 
+
+
         const fullUrl = app.apiUrl + cv.uri;
         fetch(fullUrl, config)
+        .then(function(response){
+            return  response.json();
+        })
         .then(
-            function(response){
-                return response.json();
-            }
-        )
-        .then(
-            function(data)
+            function(message)
             {
-                cv.cvTemplate();
-            }
-        )
+               
+            });
     },
 
     cvTemplate: function()
