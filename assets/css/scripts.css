@@ -46,8 +46,10 @@
         text-align: right;
         margin-bottom: .5em;
         font-family: 'Roboto', sans-serif; }
-      .wrapper .left-box .presentation p {
-        text-align: right; }
+      .wrapper .left-box .presentation .presentation__content {
+        text-align: right;
+        font-size: 1.5em;
+        font-family: Arial, Helvetica, sans-serif; }
   .wrapper .wrapper__item {
     width: 50%;
     height: 100vh; }
