@@ -120,6 +120,23 @@ h5 {
             }
 
         }
+        .cv__content__achievements {
+            display: flex;
+            flex-direction: column;
+            .cv__content__achievements__site {
+                display: flex;
+                flex-direction: row;
+                .cv__content__achievements__site__logo {
+                    flex: 1;
+                    background-color: pink;
+                    height: 150px;
+                }
+                .cv__content__achievements__site__techno {
+                    flex: 4;
+                    background-color: blueviolet;
+                }
+            }
+        }
         .bar-skill {
             width: 100%;
             margin: 2rem 0;

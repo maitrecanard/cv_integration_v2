@@ -287,6 +287,19 @@ h5 {
             margin-bottom: 2em; } }
         .cv .cv__content__skill .cv__content__skill__content .cv__content__skill__content__stars-container .text-primary {
           color: var(--light); }
+  .cv .cv__content__achievements {
+    display: flex;
+    flex-direction: column; }
+    .cv .cv__content__achievements .cv__content__achievements__site {
+      display: flex;
+      flex-direction: row; }
+      .cv .cv__content__achievements .cv__content__achievements__site .cv__content__achievements__site__logo {
+        flex: 1;
+        background-color: pink;
+        height: 150px; }
+      .cv .cv__content__achievements .cv__content__achievements__site .cv__content__achievements__site__techno {
+        flex: 4;
+        background-color: blueviolet; }
   .cv .bar-skill {
     width: 100%;
     margin: 2rem 0;
