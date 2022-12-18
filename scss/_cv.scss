@@ -7,7 +7,21 @@
 .br-1 {
     border-right: 1px solid var(--light-gray);
 }
-
+.cv__content__text__link, .cv__content__text__link_mob {
+    &:hover {
+        -webkit-box-shadow: 0px -1px 7px 2px rgba(0,0,0,0.23); 
+        box-shadow: 0px -1px 7px 2px rgba(0,0,0,0.23);
+    }
+    font-family: 'Roboto', sans-serif;
+    margin-top: .8em;
+    margin-right: .8em;
+    border: 1px solid var(--light);
+    color: black;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 7px;
+    cursor: pointer;   
+             }
 h5 {
     font-size: 1.5em;
     width: 100%;
@@ -124,16 +138,51 @@ h5 {
             display: flex;
             flex-direction: column;
             .cv__content__achievements__site {
+                @include xs {
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 20px 0;
+                }
                 display: flex;
                 flex-direction: row;
+                margin: 10px 0;
+                font-family: Arial, Helvetica, sans-serif;
                 .cv__content__achievements__site__logo {
                     flex: 1;
-                    background-color: pink;
                     height: 150px;
+                    display: flex;
+                    justify-content: center;
+                    img {
+                        height: 150px;
+                    }
                 }
                 .cv__content__achievements__site__techno {
+                    @include xs {
+                        .cv__content__text__link {
+                            display: none;
+                        }
+
+                    }
+                   
                     flex: 4;
-                    background-color: blueviolet;
+                    position: relative;
+                    padding: 1em;
+                    h5 {
+                        margin-bottom: .5em;
+                    }
+                    button {
+                        position:absolute;
+                        bottom: 0;
+                        right: 0;
+                    }
+                    
+                }
+                .cv__content__text__link_mob {
+                    @include xs {
+                        display: block;
+                    }
+                    display: none;
+                    
                 }
             }
         }
@@ -177,17 +226,3 @@ section {
     margin-bottom: 2rem;
 }
 
-.cv__content__text__link {
-    &:hover {
-        -webkit-box-shadow: 0px -1px 7px 2px rgba(0,0,0,0.23); 
-        box-shadow: 0px -1px 7px 2px rgba(0,0,0,0.23);
-    }
-    font-family: 'Roboto', sans-serif;
-    margin-top: .8em;
-    margin-right: .8em;
-    border: 1px solid var(--light);
-    color: black;
-    background-color: white;
-    padding: 10px 10px;
-    border-radius: 7px;
-    cursor: pointer;                }
